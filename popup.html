@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pronote Moyenne</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="title">Pronote Moyenne</div>
+    <div class="subtitle">À partir des moyennes par matière</div>
+  </header>
+
+  <main class="wrap">
+    <div class="row">
+      <button id="btnScan" class="btn">Scanner la page</button>
+      <button id="btnRecalc" class="btn ghost" disabled>Recalculer</button>
+    </div>
+
+    <div id="status" class="status">Ouvre Pronote → Notes / Moyennes, puis “Scanner la page”.</div>
+
+    <section class="cards">
+      <div class="card">
+        <div class="cardTitle">Moyenne simple</div>
+        <div id="avgSimple" class="big">—</div>
+        <div class="hint">Moyenne arithmétique des matières trouvées</div>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">Moyenne pondérée</div>
+        <div id="avgWeighted" class="big">—</div>
+        <div class="hint">Utilise les coefficients modifiables ci-dessous</div>
+      </div>
+    </section>
+
+    <section class="tableWrap">
+      <div class="tableHeader">
+        <div class="th">Matière</div>
+        <div class="th right">Moy.</div>
+        <div class="th right">Coef</div>
+      </div>
+      <div id="rows" class="rows"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="mini">
+      Astuce : si Pronote charge en “app” dynamique, rescane après avoir scroll un peu.
+    </div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
