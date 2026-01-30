@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Pronote Moyenne (matières)",
+  "version": "1.0.0",
+  "description": "Calcule ta moyenne Pronote à partir des moyennes de chaque matière (simple ou avec coefficients).",
+  "action": {
+    "default_title": "Pronote Moyenne",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage"]
+}
